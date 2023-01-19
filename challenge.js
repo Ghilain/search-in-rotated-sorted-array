@@ -15,7 +15,12 @@ while (lo <= hi){
 
     else if (nums[lo] <= nums[mid]){
         // lo to mid is sorted
-
+         if (nums[lo] <= target && target <= nums[mid]){
+             hi = mid - 1;
+         }
+         else{
+             lo = mid + 1;
+         }
     } 
 
     else if (nums[mid] <= nums[hi]){
