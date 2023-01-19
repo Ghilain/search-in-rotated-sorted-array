@@ -9,6 +9,7 @@ let hi = nums.length - 1;
 
 while (lo <= hi){
     let mid = lo+parseInt((hi-lo) / 2);
+    
     if (nums[mid] === target){
         return mid;
     }
@@ -29,8 +30,7 @@ while (lo <= hi){
             lo = mid + 1;
          else
             hi = mid - 1;
-    } 
-
+    }
 }
 return -1;
 };
